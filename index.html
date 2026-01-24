@@ -47,107 +47,53 @@
 <div class="page-wrapper">
   <div class="form-wrapper">
 
-    <!-- YOUR FORM (unchanged) -->
-    <form id="contactForm">
+ <form id="miniForm">
 
-      <!-- Name -->
-      <div class="form-outline mb-4">
-        <input type="text" id="name" name="name" class="form-control" required>
-        <label class="form-label" for="name">Name</label>
-      </div>
+  <!-- Gender (Radio) -->
+  <div class="mb-4">
+    <label class="form-label d-block">Gender</label>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" id="gender_male" name="gender" value="Male" required>
+      <label class="form-check-label" for="gender_male">Male</label>
+    </div>
+    <div class="form-check form-check-inline">
+      <input class="form-check-input" type="radio" id="gender_female" name="gender" value="Female">
+      <label class="form-check-label" for="gender_female">Female</label>
+    </div>
+  </div>
 
-      <!-- Email -->
-      <div class="form-outline mb-4">
-        <input type="email" id="email" name="email" class="form-control" required>
-        <label class="form-label" for="email">Email address</label>
-      </div>
+  <!-- Country (Dropdown) -->
+  <div class="form-outline mb-4">
+    <select id="country" name="country" class="form-select" required>
+      <option value="">Select Country</option>
+      <option value="India">India</option>
+      <option value="USA">USA</option>
+      <option value="UK">UK</option>
+    </select>
+    <label class="form-label" for="country">Country</label>
+  </div>
 
-      <!-- Phone -->
-      <div class="form-outline mb-4">
-        <input type="tel" id="phone" name="phone" class="form-control">
-        <label class="form-label" for="phone">Phone</label>
-      </div>
+  <!-- Satisfaction (Range) -->
+  <div class="mb-4">
+    <label class="form-label d-block" for="satisfaction">
+      Satisfaction Level: <span id="rangeValue">5</span>
+    </label>
+    <input 
+      type="range" 
+      id="satisfaction" 
+      name="satisfaction" 
+      class="form-range" 
+      min="0" 
+      max="10" 
+      value="5"
+      oninput="document.getElementById('rangeValue').innerText = this.value">
+  </div>
 
-      <!-- Password -->
-      <div class="form-outline mb-4">
-        <input type="password" id="password" name="password" class="form-control">
-        <label class="form-label" for="password">Password</label>
-      </div>
+  <!-- Submit -->
+  <button class="btn btn-info btn-block" type="submit">Submit</button>
 
-      <!-- Website -->
-      <div class="form-outline mb-4">
-        <input type="url" id="website" name="website" class="form-control">
-        <label class="form-label" for="website">Website</label>
-      </div>
+</form>
 
-      <!-- Number -->
-      <div class="form-outline mb-4">
-        <input type="number" id="age" name="age" class="form-control">
-        <label class="form-label" for="age">Age</label>
-      </div>
-
-      <!-- Date -->
-      <div class="form-outline mb-4">
-        <input type="date" id="dob" name="dob" class="form-control">
-        <label class="form-label" for="dob">Date of Birth</label>
-      </div>
-
-      <!-- Time -->
-      <div class="form-outline mb-4">
-        <input type="time" id="time" name="time" class="form-control">
-        <label class="form-label" for="time">Preferred Time</label>
-      </div>
-
-      <!-- Gender (Radio) -->
-      <div class="mb-4">
-        <label class="form-label d-block">Gender</label>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="gender_male" name="gender" value="Male">
-          <label class="form-check-label" for="gender_male">Male</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" id="gender_female" name="gender" value="Female">
-          <label class="form-check-label" for="gender_female">Female</label>
-        </div>
-      </div>
-
-      <!-- Hobbies -->
-      <div class="mb-4">
-        <label class="form-label d-block">Hobbies</label>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="hobby_reading" name="hobbies[]" value="Reading">
-          <label class="form-check-label" for="hobby_reading">Reading</label>
-        </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="hobby_music" name="hobbies[]" value="Music">
-          <label class="form-check-label" for="hobby_music">Music</label>
-        </div>
-      </div>
-
-      <!-- Range -->
-      <div class="mb-4">
-        <label class="form-label d-block" for="satisfaction">Satisfaction Level</label>
-        <input type="range" id="satisfaction" name="satisfaction" class="form-range" min="0" max="10">
-      </div>
-
-      <!-- Select -->
-      <div class="form-outline mb-4">
-        <select id="country" name="country" class="form-select">
-          <option value="">Select Country</option>
-          <option value="India">India</option>
-          <option value="USA">USA</option>
-        </select>
-      </div>
-
-      <!-- Textarea -->
-      <div class="form-outline mb-4">
-        <textarea class="form-control" style="resize:none;" id="message" name="message" rows="4" required></textarea>
-        <label class="form-label" for="message">Message</label>
-      </div>
-
-      <button class="btn btn-info btn-block mb-4" type="submit">Send</button>
-
-    </form>
 
   </div>
 </div>
